@@ -9,5 +9,6 @@ This structure provides a phased, durable, and query-ready setup for running BBo
    ```bash
    ./scripts/run_phase.sh phase1_passive
    ```
-3. Results are saved in `outputs/`, per phase
-4. Use Neo4j or SQLite/Datasette to explore results
+3. Or run auto_run_phase.sh target.com
+4. Results are saved in `outputs/`, per phase
+5. Use Neo4j or SQLite/Datasette to explore results
