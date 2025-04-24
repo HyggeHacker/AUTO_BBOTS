@@ -1,0 +1,35 @@
+description: Initial passive reconnaissance
+
+flags:
+  - passive
+  - safe
+
+modules:
+  - crt
+  - censys
+  - shodan_dns
+  - shodan_idb
+  - securitytrails
+  - virustotal
+  - wayback
+  - spyse
+  - dnsdumpster
+  - threatcrowd
+  - urlscan
+  - alienvault_otx
+  - bevigil
+  - chaos
+  - fullhunt
+  - builtwith
+  - ip2location
+  - binaryedge
+  - zoomeye
+  - subdomainradar
+
+output_modules:
+  - asset_inventory
+  - neo4j
+
+config:
+  scope:
+    report_distance: 0

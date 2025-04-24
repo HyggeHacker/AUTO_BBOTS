@@ -1,0 +1,27 @@
+description: Target verification, attack surface validation, and exploit readiness
+
+flags:
+  - active
+  - validate
+  - dangerous
+
+modules:
+  - open_ports
+  - exploitdb
+  - metasploit_check
+  - honeypot_check
+  - reputation
+  - wafw00f
+  - jsfinder
+  - urlscan
+  - sslyze
+  - credshed
+  - dns_zone_transfer
+
+output_modules:
+  - asset_inventory
+  - neo4j
+
+config:
+  scope:
+    report_distance: 2

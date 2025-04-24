@@ -1,0 +1,28 @@
+description: Cloud asset and metadata enumeration
+
+flags:
+  - cloud
+  - passive
+
+modules:
+  - aws
+  - azure
+  - cloud_enum
+  - s3_buckets
+  - s3_buckets_brute
+  - google_cloud
+  - cname_chain
+  - ssl
+  - ipwhois
+  - passivetotal
+  - trickest
+  - c99
+  - leakix
+
+output_modules:
+  - asset_inventory
+  - neo4j
+
+config:
+  scope:
+    report_distance: 0

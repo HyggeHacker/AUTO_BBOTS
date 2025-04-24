@@ -1,0 +1,36 @@
+description: Active service and vulnerability enumeration
+
+flags:
+  - active
+  - portscan
+  - validate
+
+modules:
+  - nmap
+  - httpx
+  - nuclei
+  - gobuster
+  - wafw00f
+  - wayback
+  - http_headers
+  - urlscan
+  - jsfinder
+  - wpscan
+
+output_modules:
+  - asset_inventory
+  - neo4j
+
+config:
+  modules:
+    nmap:
+      timing: 4
+      top_ports: 1000
+    nuclei:
+      templates: "cves,exposures,misc"
+    gobuster:
+      wordlist: "/usr/share/wordlists/dirb/common.txt"
+    httpx:
+      threads: 50
+  scope:
+    report_distance: 1
